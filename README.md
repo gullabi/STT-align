@@ -1,5 +1,6 @@
-# DSAlign
-DeepSpeech based forced alignment tool
+# STT-Align
+🐸STT based forced alignment tool, fork of unmaintained
+[DSAlign](https://github.com/mozilla/DSAlign).
 
 ## Installation
 
@@ -15,9 +16,10 @@ bin  include  lib  lib64  pyvenv.cfg  share
 
 `bin/align.sh` will automatically use it.
 
-Internally DSAlign uses the [DeepSpeech](https://github.com/mozilla/DeepSpeech/) STT engine.
+Internally STT-align uses the [🐸STT](https://github.com/coqui-ai/STT) STT engine.
 For it to be able to function, it requires a couple of files that are specific to 
-the language of the speech data you want to align.
+the language of the speech data you want to align. You can download the models from
+[here](https://coqui.ai/models).
 If you want to align English, there is already a helper script that will download and prepare
 all required data:
 
