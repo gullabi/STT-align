@@ -2,12 +2,12 @@ import os
 import json
 import logging
 import argparse
-import deepspeech
 import subprocess
 import os.path as path
 import numpy as np
 import textdistance
 import multiprocessing
+from stt import Model
 from collections import Counter
 from search import FuzzySearch
 from glob import glob
@@ -65,7 +65,7 @@ model = None
 
 def init_stt(output_graph_path, scorer_path):
     global model
-    model = deepspeech.Model(output_graph_path)
+    model = Model(output_graph_path)
     model.enableExternalScorer(scorer_path)
     logging.debug('Process {}: Loaded models'.format(os.getpid()))
 

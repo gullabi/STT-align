@@ -1,6 +1,6 @@
 six
 sox
-deepspeech==0.7.1
+stt==1.1.0
 ds-ctcdecoder==0.7.1
 webrtcvad
 textdistance
