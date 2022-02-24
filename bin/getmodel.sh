@@ -4,6 +4,7 @@ version="0.7.1"
 dir="deepspeech-${version}-models"
 am="${dir}.pbmm"
 scorer="${dir}.scorer"
+tflite="${dir}.tflite"
 
 mkdir -p models/en
 cd models/en
@@ -14,6 +15,10 @@ fi
 
 if [[ ! -f $scorer ]] ; then
     wget "https://github.com/mozilla/DeepSpeech/releases/download/v${version}/${scorer}"
+fi
+
+if [[ ! -f $tflite ]] ; then
+    wget "https://github.com/mozilla/DeepSpeech/releases/download/v${version}/${tflite}"
 fi
 
 if [[ ! -f "alphabet.txt" ]] ; then
